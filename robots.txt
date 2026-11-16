@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wondevi-productions.github.io/sitemap.xml
