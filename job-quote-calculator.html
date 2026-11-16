@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google-site-verification" content="tPXCRYpCN8xnlch06chBktrB17D9lYKm7EcLdcbqKX0">
+<title>Free Job Quote Calculator for Mobile Mechanics and Tradies (Australia)</title><meta name="description" content="Price one job: labour, call-out, travel, parts markup and GST. Free quote calculator for Australian mobile mechanics and tradies. No sign-up.">
+<link rel="canonical" href="https://wondevi-productions.github.io/job-quote-calculator.html"><meta property="og:title" content="Free Job Quote Calculator for Mobile Mechanics and Tradies (Australia)"><meta property="og:description" content="Price one job: labour, call-out, travel, parts markup and GST. Free quote calculator for Australian mobile mechanics and tradies. No sign-up.">
+<meta property="og:image" content="https://wondevi-productions.github.io/preview.png"><meta property="og:url" content="https://wondevi-productions.github.io/job-quote-calculator.html"><meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--navy:#13233F;--teal:#0F9D8A;--orange:#F28C28;--ink:#1E293B;--muted:#5A6475;--light:#EEF2F7;--yel:#FFF4D6}
+*{box-sizing:border-box}body{margin:0;font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#fff}
+header{background:var(--navy);color:#fff;padding:14px 20px}header a{color:#fff;text-decoration:none;font-weight:700}
+header .wrap{display:block}
+nav{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:4px;width:100%;min-width:0}
+nav a{color:#C9D3E6;font-weight:500;font-size:15px;flex:0 0 auto}
+@media(max-width:640px){nav{gap:2px 10px}nav a{flex:1 1 42%;font-size:14px;white-space:normal}}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+h1{font-size:2.1rem;line-height:1.2;color:var(--navy);margin:32px 0 8px}h2{color:var(--navy);margin-top:36px}
+.lead{font-size:1.15rem;color:var(--muted)}
+.calc{background:var(--light);border-radius:14px;padding:22px;margin:24px 0}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 20px}@media(max-width:640px){.grid{grid-template-columns:1fr}}
+label{font-size:14px;font-weight:600;display:block}input{width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)}
+.results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}@media(max-width:640px){.results{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:10px;padding:14px;border:1px solid #D5DCE6}.card b{display:block;font-size:1.6rem;color:var(--navy)}
+.card small{color:var(--muted)}.warn{background:#FFC7CE}.ok{background:#C6EFCE}.mid{background:#FFEB9C}
+.cta{background:var(--navy);color:#fff;border-radius:14px;padding:24px;margin:32px 0;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.cta img{max-width:300px;width:100%;border-radius:8px}.cta div{flex:1;min-width:240px}
+.btn{display:inline-block;background:var(--orange);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;margin-top:8px}
+table{border-collapse:collapse;width:100%;margin:12px 0}td,th{border:1px solid #D5DCE6;padding:8px 10px;text-align:left}th{background:var(--navy);color:#fff}
+footer{color:var(--muted);font-size:14px;padding:30px 20px;border-top:1px solid #E2E8F0;margin-top:40px}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Job quote calculator", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"}, "description": "Free browser calculator that prices one job from labour, travel, parts markup and GST."}</script></head><body>
+<header><div class="wrap"><a href="./">Wondevi Productions</a><nav><a href="index.html">Hourly rate</a><a href="job-quote-calculator.html">Job quote</a><a href="sole-trader-gst-bas-calculator.html">GST estimate</a><a href="mobile-mechanic-hourly-rate.html">Rate guide</a><a href="parts-markup-guide.html">Parts markup</a><a href="call-out-fee-and-travel-charges.html">Call-out</a><a href="mechanic-workshop-whs-checklist.html">WHS kit</a><a href="used-car-inspection-checklist.html">Used car</a><a href="tradie-hourly-rate-australia.html">Tradie rates</a><a href="used-car-test-drive-checklist.html">Test drive</a></nav></div></header>
+<main class="wrap">
+<h1>Job quote calculator</h1>
+<p class="lead">Price <b>one job</b> from hours, travel and parts. Enter your own rates. The result updates as you type. Nothing is uploaded.</p>
+<div class="calc">
+<div class="grid">
+<div><label>Labour hours</label><input id="qhrs" type="number" min="0" step="0.25" value="2"></div>
+<div><label>Hourly rate, ex GST ($)</label><input id="qrate" type="number" min="0" step="1" value="110"></div>
+<div><label>Call-out fee, ex GST ($)</label><input id="qcall" type="number" min="0" step="1" value="0"></div>
+<div><label>Travel (km)</label><input id="qkm" type="number" min="0" step="1" value="20"></div>
+<div><label>Travel rate, ex GST ($ per km)</label><input id="qkmrate" type="number" min="0" step="0.1" value="1.50"></div>
+<div><label>Parts, what you paid, ex GST ($)</label><input id="qparts" type="number" min="0" step="1" value="80"></div>
+<div><label>Parts markup (%)</label><input id="qmark" type="number" min="-100" step="1" value="50"></div>
+<div><label>Consumables, ex GST ($)</label><input id="qcon" type="number" min="0" step="1" value="10"></div>
+</div>
+<label style="margin-top:12px"><input id="qgst" type="checkbox" checked style="width:auto"> Add 10% GST</label>
+<div class="results">
+<div class="card"><small>Labour</small><b id="qlab">-</b><small>hours x rate</small></div>
+<div class="card"><small>Travel</small><b id="qtrav">-</b><small>call-out + km</small></div>
+<div class="card"><small>Parts on the quote</small><b id="qpsell">-</b><small>cost plus markup</small></div>
+</div>
+<div class="results">
+<div class="card"><small>Subtotal ex GST</small><b id="qsub">-</b><small>includes consumables</small></div>
+<div class="card"><small>GST</small><b id="qgstout">-</b><small>10% when ticked</small></div>
+<div class="card" id="qtotalcard"><small>Customer total</small><b id="qtot">-</b><small id="qtotnote">inc GST</small></div>
+</div>
+</div>
+<script>
+const q=id=>document.getElementById(id),qn=id=>Math.max(0,parseFloat(q(id).value)||0),qm=v=>'$'+v.toFixed(2);
+function quote(){
+  const hrs=qn('qhrs'),rate=qn('qrate'),call=qn('qcall'),km=qn('qkm'),kmrate=qn('qkmrate');
+  const parts=qn('qparts'),mark=Math.max(-100,parseFloat(q('qmark').value)||0),con=qn('qcon'),gstOn=q('qgst').checked;
+  const labour=hrs*rate,travel=call+km*kmrate,psell=parts*(1+mark/100);
+  const sub=labour+travel+psell+con,gst=gstOn?sub*0.10:0,tot=sub+gst;
+  q('qlab').textContent=qm(labour);q('qtrav').textContent=qm(travel);q('qpsell').textContent=qm(psell);
+  q('qsub').textContent=qm(sub);q('qgstout').textContent=qm(gst);q('qtot').textContent=qm(tot);
+  q('qtotnote').textContent=gstOn?'inc GST':'GST not added';
+}
+document.querySelectorAll('#qhrs,#qrate,#qcall,#qkm,#qkmrate,#qparts,#qmark,#qcon,#qgst').forEach(el=>el.addEventListener('input',quote));
+quote();
+</script>
+<h2>What each line means</h2>
+<ul>
+<li><b>Labour</b> is hours on the tools times your charge-out rate. Get that rate from the <a href="./">hourly rate calculator</a>. Use the ex-GST rate.</li>
+<li><b>Travel</b> is a call-out fee plus kilometres times your per-km rate. The hourly calculator also shows van cost per km, which is the floor for that rate. See <a href="call-out-fee-and-travel-charges.html">travel and call-out fees</a>.</li>
+<li><b>Parts</b> is what you paid, then your markup. A 50% markup on $80 of parts is $120 on the quote. See the <a href="parts-markup-guide.html">parts markup guide</a>.</li>
+<li><b>GST</b> is 10% of the ex-GST subtotal, added only if you tick the box. Tick it when you are registered for GST and the job is taxable.</li>
+</ul>
+<p>Worked example with the numbers already filled in: 2 hours at $110 = $220 labour, $0 call-out + 20 km at $1.50 = $30 travel, parts $80 plus 50% = $120, consumables $10. Subtotal $380. GST $38. Customer total <b>$418</b>.</p>
+<p><i>A quoting aid only. It does not set your prices, and it is not tax advice. Confirm GST with your accountant.</i></p>
+<div class="cta"><img src="preview.png" alt="Job costing and quote calculator spreadsheet dashboard" loading="lazy">
+<div><h2 style="color:#fff;margin-top:0">Want this for every job, not just your hourly rate?</h2>
+<p>The full <b>Job Costing, Quoting &amp; Profit Calculator</b> (Excel + Google Sheets) builds an exact quote with labour, travel, tiered parts markup, consumables and GST, and shows your true profit on every job. It also tracks quoted vs actual hours in a 50-job log with monthly profit totals.</p>
+<a class="btn" href="https://wondevi.gumroad.com/l/job-costing-quote-profit-calculator/LAUNCH30" rel="nofollow">Get it - launch price 30% off</a></div></div></main>
+<footer><div class="wrap">&copy; Wondevi Productions. Free tools and guides for mobile mechanics, tradies and sole traders. Figures are examples. Check your own costs, and your tax obligations with your accountant.</div></footer>
+</body></html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google-site-verification" content="tPXCRYpCN8xnlch06chBktrB17D9lYKm7EcLdcbqKX0">
+<title>Sole Trader GST Estimate for a BAS Period (Australia)</title><meta name="description" content="Estimate GST on sales and purchases for one BAS period. Australian sole trader calculator: one-eleventh of GST-inclusive amounts, or 10% of GST-exclusive amounts. Not a BAS lodgement.">
+<link rel="canonical" href="https://wondevi-productions.github.io/sole-trader-gst-bas-calculator.html"><meta property="og:title" content="Sole Trader GST Estimate for a BAS Period (Australia)"><meta property="og:description" content="Estimate GST on sales and purchases for one BAS period. Australian sole trader calculator: one-eleventh of GST-inclusive amounts, or 10% of GST-exclusive amounts. Not a BAS lodgement.">
+<meta property="og:image" content="https://wondevi-productions.github.io/preview.png"><meta property="og:url" content="https://wondevi-productions.github.io/sole-trader-gst-bas-calculator.html"><meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--navy:#13233F;--teal:#0F9D8A;--orange:#F28C28;--ink:#1E293B;--muted:#5A6475;--light:#EEF2F7;--yel:#FFF4D6}
+*{box-sizing:border-box}body{margin:0;font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#fff}
+header{background:var(--navy);color:#fff;padding:14px 20px}header a{color:#fff;text-decoration:none;font-weight:700}
+header .wrap{display:block}
+nav{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:4px;width:100%;min-width:0}
+nav a{color:#C9D3E6;font-weight:500;font-size:15px;flex:0 0 auto}
+@media(max-width:640px){nav{gap:2px 10px}nav a{flex:1 1 42%;font-size:14px;white-space:normal}}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+h1{font-size:2.1rem;line-height:1.2;color:var(--navy);margin:32px 0 8px}h2{color:var(--navy);margin-top:36px}
+.lead{font-size:1.15rem;color:var(--muted)}
+.calc{background:var(--light);border-radius:14px;padding:22px;margin:24px 0}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 20px}@media(max-width:640px){.grid{grid-template-columns:1fr}}
+label{font-size:14px;font-weight:600;display:block}input{width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)}
+.results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}@media(max-width:640px){.results{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:10px;padding:14px;border:1px solid #D5DCE6}.card b{display:block;font-size:1.6rem;color:var(--navy)}
+.card small{color:var(--muted)}.warn{background:#FFC7CE}.ok{background:#C6EFCE}.mid{background:#FFEB9C}
+.cta{background:var(--navy);color:#fff;border-radius:14px;padding:24px;margin:32px 0;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.cta img{max-width:300px;width:100%;border-radius:8px}.cta div{flex:1;min-width:240px}
+.btn{display:inline-block;background:var(--orange);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;margin-top:8px}
+table{border-collapse:collapse;width:100%;margin:12px 0}td,th{border:1px solid #D5DCE6;padding:8px 10px;text-align:left}th{background:var(--navy);color:#fff}
+footer{color:var(--muted);font-size:14px;padding:30px 20px;border-top:1px solid #E2E8F0;margin-top:40px}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I estimate GST on a GST-inclusive sale?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the GST-inclusive amount by 11. $11,000 inclusive includes $1,000 of GST."}}, {"@type": "Question", "name": "Is this estimate a BAS lodgement?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a rough GST figure for one period. It ignores GST-free sales, private use, capital purchases and other BAS adjustments. Lodge the real BAS with the ATO or your accountant."}}]}</script></head><body>
+<header><div class="wrap"><a href="./">Wondevi Productions</a><nav><a href="index.html">Hourly rate</a><a href="job-quote-calculator.html">Job quote</a><a href="sole-trader-gst-bas-calculator.html">GST estimate</a><a href="mobile-mechanic-hourly-rate.html">Rate guide</a><a href="parts-markup-guide.html">Parts markup</a><a href="call-out-fee-and-travel-charges.html">Call-out</a><a href="mechanic-workshop-whs-checklist.html">WHS kit</a><a href="used-car-inspection-checklist.html">Used car</a><a href="tradie-hourly-rate-australia.html">Tradie rates</a><a href="used-car-test-drive-checklist.html">Test drive</a></nav></div></header>
+<main class="wrap">
+<h1>Sole trader GST estimate</h1>
+<p class="lead">Turn one period's sales and purchases into a <b>rough GST figure</b>. Use it to see the size of the cheque. Lodge the real BAS in ATO online services or through your accountant.</p>
+<div class="calc">
+<div class="grid">
+<div><label>Sales for the period ($)</label><input id="gsales" type="number" min="0" step="0.01" value="11000"></div>
+<div><label>Purchases you can claim GST on ($)</label><input id="gpurch" type="number" min="0" step="0.01" value="3300"></div>
+</div>
+<label style="margin-top:12px"><input id="gincl" type="checkbox" checked style="width:auto"> Amounts are GST-inclusive</label>
+<div class="results">
+<div class="card"><small>GST on sales (1A style)</small><b id="g1a">-</b><small id="g1anote">one-eleventh</small></div>
+<div class="card"><small>GST on purchases (1B style)</small><b id="g1b">-</b><small id="g1bnote">one-eleventh</small></div>
+<div class="card" id="gnetcard"><small>Net GST estimate</small><b id="gnet">-</b><small id="gnetnote">pay this</small></div>
+</div>
+</div>
+<script>
+const g=id=>document.getElementById(id),gn=id=>Math.max(0,parseFloat(g(id).value)||0),gm=v=>'$'+v.toFixed(2);
+function gstcalc(){
+  const incl=g('gincl').checked,sales=gn('gsales'),purch=gn('gpurch');
+  const onSales=incl?sales/11:sales*0.10,onPurch=incl?purch/11:purch*0.10,net=onSales-onPurch;
+  g('g1a').textContent=gm(onSales);g('g1b').textContent=gm(onPurch);g('gnet').textContent=gm(Math.abs(net));
+  g('g1anote').textContent=incl?'one-eleventh of sales':'10% of sales';
+  g('g1bnote').textContent=incl?'one-eleventh of purchases':'10% of purchases';
+  const card=g('gnetcard');card.className='card';
+  if(net>=0){card.classList.add('mid');g('gnetnote').textContent='estimated amount to pay';}
+  else{card.classList.add('ok');g('gnetnote').textContent='estimated refund';}
+}
+document.querySelectorAll('#gsales,#gpurch,#gincl').forEach(el=>el.addEventListener('input',gstcalc));
+gstcalc();
+</script>
+<h2>How the estimate is calculated</h2>
+<ul>
+<li>GST-inclusive amount: GST is <b>one-eleventh</b>. $11,000 inclusive includes $1,000 GST.</li>
+<li>GST-exclusive amount: GST is <b>10%</b>. $10,000 exclusive plus GST is $11,000.</li>
+<li>Net estimate = GST on sales minus GST on the purchases you entered.</li>
+</ul>
+<p>With the numbers filled in (GST-inclusive): sales $11,000 give $1,000 GST, purchases $3,300 give $300 GST, net estimate <b>$700 to pay</b>.</p>
+<h2>What this leaves out</h2>
+<p>A real BAS is wider than this box. This estimate assumes every sale is taxable and every purchase you typed is fully creditable. It does <b>not</b> handle GST-free sales, input-taxed supplies, private use of purchases, capital purchases, fuel tax credits, or adjustments. Those change the figure.</p>
+<p>Labels "1A style" and "1B style" mean "the GST portion", which is the idea behind BAS labels 1A and 1B. This page does not lodge anything and it does not fill in G1 or the other labels. The ATO's instructions are at <a href="https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst">ato.gov.au GST</a>.</p>
+<p><i>General information, not tax, legal or accounting advice. Check the period with your accountant or a registered tax agent before you lodge.</i></p>
+<div class="cta"><div><h2 style="color:#fff;margin-top:0">Need this for the whole year, not one period?</h2>
+<p>The <b>Sole Trader Income, Expense &amp; GST/BAS Tracker</b> (A$19) is a spreadsheet for recording income, expenses and a GST estimate across the year. It is a record-keeping workbook, not a BAS lodgement and not tax advice.</p>
+<a class="btn" href="https://payhip.com/b/gx9Ya" rel="nofollow">Get the tracker - A$19</a></div></div></main>
+<footer><div class="wrap">&copy; Wondevi Productions. Free tools and guides for mobile mechanics, tradies and sole traders. Figures are examples. Check your own costs, and your tax obligations with your accountant.</div></footer>
+</body></html>
