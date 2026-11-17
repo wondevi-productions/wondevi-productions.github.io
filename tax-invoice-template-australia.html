@@ -84,7 +84,7 @@ footer{color:var(--muted);font-size:14px;padding:30px 20px;border-top:1px solid 
 <a class="btn" href="https://wondevi.gumroad.com/l/job-costing-quote-profit-calculator/LAUNCH30" rel="nofollow">Get it - launch price 30% off</a></div></div></main>
 <footer><div class="wrap">&copy; Wondevi Productions. Free tools and guides for Australian tradies, mechanics and sole traders. Check your own GST and invoicing obligations with the ATO or your accountant.</div></footer>
 <script>
-const $=id=>document.getElementById(id);$('dt').valueAsDate=new Date();
+const $=id=>document.getElementById(id);{const d=new Date();$('dt').value=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 const f=n=>'$'+n.toLocaleString('en-AU',{minimumFractionDigits:2,maximumFractionDigits:2});
 function addRow(d,q,p){const r=document.createElement('div');r.className='row';
 r.innerHTML='<input class="d" placeholder="e.g. Labour - brake pads and rotors"><input type="number" min="0" step="any"><input type="number" min="0" step="0.01"><span>$0.00</span><button class="x noprint" title="Remove">&times;</button>';
