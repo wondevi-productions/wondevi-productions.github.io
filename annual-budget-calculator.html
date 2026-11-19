@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en-AU"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google-site-verification" content="tPXCRYpCN8xnlch06chBktrB17D9lYKm7EcLdcbqKX0">
+<title>Annual Budget Calculator - Free Yearly Budget Planner (Weekly, Fortnightly, Monthly and Yearly Bills)</title><meta name="description" content="Free annual budget calculator: turn weekly, fortnightly, monthly, quarterly and yearly bills into one yearly total and see what is left each year and each month. Runs in your browser.">
+<link rel="canonical" href="https://wondevi-productions.github.io/annual-budget-calculator.html"><meta property="og:title" content="Annual Budget Calculator - Free Yearly Budget Planner (Weekly, Fortnightly, Monthly and Yearly Bills)"><meta property="og:description" content="Free annual budget calculator: turn weekly, fortnightly, monthly, quarterly and yearly bills into one yearly total and see what is left each year and each month. Runs in your browser.">
+<meta property="og:image" content="https://wondevi-productions.github.io/annual-preview.png"><meta property="og:url" content="https://wondevi-productions.github.io/annual-budget-calculator.html"><meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--navy:#13233F;--teal:#0F9D8A;--orange:#F28C28;--ink:#1E293B;--muted:#5A6475;--light:#EEF2F7;--yel:#FFF4D6}
+*{box-sizing:border-box}body{margin:0;font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#fff}
+header{background:var(--navy);color:#fff;padding:14px 20px}header a{color:#fff;text-decoration:none;font-weight:700}
+header .wrap{display:block}
+nav{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:4px;width:100%;min-width:0}
+nav a{color:#C9D3E6;font-weight:500;font-size:15px;flex:0 0 auto}
+@media(max-width:640px){nav{gap:2px 10px}nav a{flex:1 1 42%;font-size:14px;white-space:normal}}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+h1{font-size:2.1rem;line-height:1.2;color:var(--navy);margin:32px 0 8px}h2{color:var(--navy);margin-top:36px}
+.lead{font-size:1.15rem;color:var(--muted)}
+.calc{background:var(--light);border-radius:14px;padding:22px;margin:24px 0}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 20px}@media(max-width:640px){.grid{grid-template-columns:1fr}}
+label{font-size:14px;font-weight:600;display:block}input{width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)}
+.results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}@media(max-width:640px){.results{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:10px;padding:14px;border:1px solid #D5DCE6}.card b{display:block;font-size:1.6rem;color:var(--navy)}
+.card small{color:var(--muted)}.warn{background:#FFC7CE}.ok{background:#C6EFCE}.mid{background:#FFEB9C}
+.cta{background:var(--navy);color:#fff;border-radius:14px;padding:24px;margin:32px 0;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.cta img{max-width:300px;width:100%;border-radius:8px}.cta div{flex:1;min-width:240px}
+.btn{display:inline-block;background:var(--orange);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;margin-top:8px}
+table{border-collapse:collapse;width:100%;margin:12px 0}td,th{border:1px solid #D5DCE6;padding:8px 10px;text-align:left}th{background:var(--navy);color:#fff}
+footer{color:var(--muted);font-size:14px;padding:30px 20px;border-top:1px solid #E2E8F0;margin-top:40px}
+</style></head><body>
+<header><div class="wrap"><a href="./">Wondevi Productions</a><nav><a href="index.html">Hourly rate</a><a href="job-quote-calculator.html">Job quote</a><a href="sole-trader-gst-bas-calculator.html">GST estimate</a><a href="mobile-mechanic-hourly-rate.html">Rate guide</a><a href="parts-markup-guide.html">Parts markup</a><a href="call-out-fee-and-travel-charges.html">Call-out</a><a href="mechanic-workshop-whs-checklist.html">WHS kit</a><a href="used-car-inspection-checklist.html">Used car</a><a href="tradie-hourly-rate-australia.html">Tradie rates</a><a href="electrician-hourly-rate-australia.html">Electrician rate</a><a href="used-car-test-drive-checklist.html">Test drive</a><a href="tax-invoice-template-australia.html">Invoice</a><a href="budget-by-paycheck-calculator.html">Paycheck budget</a><a href="annual-budget-calculator.html">Annual budget</a><a href="shop/">Shop</a></nav></div></header>
+<main class="wrap">
+<h1>Annual budget calculator: your whole year in one number</h1>
+<p class="lead">Rent is monthly, groceries are weekly, rego is yearly, the power bill is quarterly - so it's hard to see what a year really costs. Put each bill in with how often you pay it, and this turns everything into one yearly total and shows what's left over.</p>
+<div class="calc">
+<div class="grid">
+<div><label for="inc">Take-home pay ($)</label><input id="inc" type="number" min="0" step="0.01" value="2400"></div>
+<div><label for="incf">How often you're paid</label><select id="incf" style="width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)"><option value="weekly">Weekly</option><option value="fortnightly" selected>Fortnightly</option><option value="monthly">Monthly</option><option value="quarterly">Quarterly</option><option value="yearly">Yearly</option></select></div>
+</div>
+<p style="margin:18px 0 4px"><b>Bills and spending</b> (amount and how often you pay it)</p>
+<table><tr><th>Item</th><th>Amount ($)</th><th>How often</th><th style="text-align:right">Per year</th></tr><tr><td><input id="n0" value="Rent" aria-label="Item 1 name"></td><td><input id="a0" type="number" min="0" step="0.01" value="1600" aria-label="Item 1 amount"></td><td><select id="f0" style="width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)"><option value="weekly">Weekly</option><option value="fortnightly">Fortnightly</option><option value="monthly" selected>Monthly</option><option value="quarterly">Quarterly</option><option value="yearly">Yearly</option></select></td><td id="y0" style="text-align:right"></td></tr><tr><td><input id="n1" value="Groceries" aria-label="Item 2 name"></td><td><input id="a1" type="number" min="0" step="0.01" value="180" aria-label="Item 2 amount"></td><td><select id="f1" style="width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)"><option value="weekly" selected>Weekly</option><option value="fortnightly">Fortnightly</option><option value="monthly">Monthly</option><option value="quarterly">Quarterly</option><option value="yearly">Yearly</option></select></td><td id="y1" style="text-align:right"></td></tr><tr><td><input id="n2" value="Fuel" aria-label="Item 3 name"></td><td><input id="a2" type="number" min="0" step="0.01" value="60" aria-label="Item 3 amount"></td><td><select id="f2" style="width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)"><option value="weekly" selected>Weekly</option><option value="fortnightly">Fortnightly</option><option value="monthly">Monthly</option><option value="quarterly">Quarterly</option><option value="yearly">Yearly</option></select></td><td id="y2" style="text-align:right"></td></tr><tr><td><input id="n3" value="Electricity" aria-label="Item 4 name"></td><td><input id="a3" type="number" min="0" step="0.01" value="320" aria-label="Item 4 amount"></td><td><select id="f3" style="width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)"><option value="weekly">Weekly</option><option value="fortnightly">Fortnightly</option><option value="monthly">Monthly</option><option value="quarterly" selected>Quarterly</option><option value="yearly">Yearly</option></select></td><td id="y3" style="text-align:right"></td></tr><tr><td><input id="n4" value="Car insurance" aria-label="Item 5 name"></td><td><input id="a4" type="number" min="0" step="0.01" value="140" aria-label="Item 5 amount"></td><td><select id="f4" style="width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)"><option value="weekly">Weekly</option><option value="fortnightly">Fortnightly</option><option value="monthly" selected>Monthly</option><option value="quarterly">Quarterly</option><option value="yearly">Yearly</option></select></td><td id="y4" style="text-align:right"></td></tr><tr><td><input id="n5" value="Car rego" aria-label="Item 6 name"></td><td><input id="a5" type="number" min="0" step="0.01" value="850" aria-label="Item 6 amount"></td><td><select id="f5" style="width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)"><option value="weekly">Weekly</option><option value="fortnightly">Fortnightly</option><option value="monthly">Monthly</option><option value="quarterly">Quarterly</option><option value="yearly" selected>Yearly</option></select></td><td id="y5" style="text-align:right"></td></tr><tr><td><input id="n6" value="Phone" aria-label="Item 7 name"></td><td><input id="a6" type="number" min="0" step="0.01" value="65" aria-label="Item 7 amount"></td><td><select id="f6" style="width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)"><option value="weekly">Weekly</option><option value="fortnightly">Fortnightly</option><option value="monthly" selected>Monthly</option><option value="quarterly">Quarterly</option><option value="yearly">Yearly</option></select></td><td id="y6" style="text-align:right"></td></tr><tr><td><input id="n7" value="Streaming" aria-label="Item 8 name"></td><td><input id="a7" type="number" min="0" step="0.01" value="25" aria-label="Item 8 amount"></td><td><select id="f7" style="width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)"><option value="weekly">Weekly</option><option value="fortnightly">Fortnightly</option><option value="monthly" selected>Monthly</option><option value="quarterly">Quarterly</option><option value="yearly">Yearly</option></select></td><td id="y7" style="text-align:right"></td></tr><tr><td><input id="n8" value="" aria-label="Item 9 name"></td><td><input id="a8" type="number" min="0" step="0.01" value="" aria-label="Item 9 amount"></td><td><select id="f8" style="width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)"><option value="weekly">Weekly</option><option value="fortnightly">Fortnightly</option><option value="monthly" selected>Monthly</option><option value="quarterly">Quarterly</option><option value="yearly">Yearly</option></select></td><td id="y8" style="text-align:right"></td></tr><tr><td><input id="n9" value="" aria-label="Item 10 name"></td><td><input id="a9" type="number" min="0" step="0.01" value="" aria-label="Item 10 amount"></td><td><select id="f9" style="width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)"><option value="weekly">Weekly</option><option value="fortnightly">Fortnightly</option><option value="monthly" selected>Monthly</option><option value="quarterly">Quarterly</option><option value="yearly">Yearly</option></select></td><td id="y9" style="text-align:right"></td></tr></table>
+<div class="results">
+<div class="card"><small>Income per year</small><b id="ri">-</b></div>
+<div class="card"><small>Spending per year</small><b id="rs">-</b></div>
+<div class="card" id="rlc"><small>Left over per year</small><b id="rl">-</b><small id="rm"></small></div>
+</div>
+</div>
+<script>
+// Annual budget: every amount converted to a yearly figure by its frequency; monthly average = yearly / 12.
+const PER_YEAR={weekly:52,fortnightly:26,monthly:12,quarterly:4,yearly:1};
+function annualise(amount,freq){ if(!(amount>=0)||!(freq in PER_YEAR)) return 0; return Math.round(amount*PER_YEAR[freq]*100)/100; }
+function yearPlan(income,incomeFreq,items){
+  const inc=annualise(income,incomeFreq);
+  const rows=items.filter(i=>i.amount>0&&i.freq in PER_YEAR).map(i=>({name:i.name||'Item',year:annualise(i.amount,i.freq)}));
+  const out=Math.round(rows.reduce((s,r)=>s+r.year,0)*100)/100;
+  return {incomeYear:inc, spendYear:out, leftYear:Math.round((inc-out)*100)/100, leftMonth:Math.round((inc-out)/12*100)/100, rows};
+}
+
+
+
+const g=id=>document.getElementById(id);
+const money=v=>(v<0?'-':'')+'$'+Math.abs(v).toLocaleString('en-AU',{minimumFractionDigits:2,maximumFractionDigits:2});
+function calc(){
+ const items=[]; for(let i=0;i<10;i++){ items.push({name:g('n'+i).value.trim(),amount:+g('a'+i).value,freq:g('f'+i).value});
+   const y=annualise(+g('a'+i).value,g('f'+i).value); g('y'+i).textContent=y>0?money(y):''; }
+ const r=yearPlan(+g('inc').value||0,g('incf').value,items);
+ g('ri').textContent=money(r.incomeYear); g('rs').textContent=money(r.spendYear); g('rl').textContent=money(r.leftYear);
+ g('rm').textContent=money(r.leftMonth)+' a month on average';
+ const c=g('rlc'); c.classList.remove('ok','warn'); c.classList.add(r.leftYear<0?'warn':'ok');
+}
+document.querySelectorAll('input,select').forEach(el=>el.addEventListener('input',calc)); calc();
+
+</script>
+<h2>How it works</h2>
+<ul>
+<li>Each amount is turned into a yearly figure: weekly x 52, fortnightly x 26, monthly x 12, quarterly x 4, yearly x 1.</li>
+<li>Left over per year = yearly income minus yearly spending. The monthly figure is that divided by 12.</li>
+<li>52 weeks and 26 fortnights are used as a standard year; a year with an extra pay day will differ slightly.</li>
+</ul>
+<p>Example with the numbers filled in: $2,400 take-home pay a fortnight is $62,400 a year. The eight bills add up to $36,570 a year, which leaves $25,830 - about $2,152.50 a month on average.</p>
+<p><i>A planning tool using the numbers you enter; not financial advice. Nothing you type is sent anywhere - it runs in your browser.</i></p>
+<div class="cta"><img src="annual-preview.png" alt="Annual budget spreadsheet for Microsoft Excel with a 12-month year overview (example figures)" loading="lazy">
+<div><h2 style="color:#fff;margin-top:0">Track the whole year, month by month</h2>
+<p>The <b>Annual Budget Spreadsheet</b> (made for Microsoft Excel) adds a Year Overview with every category across all 12 months - planned vs actual, year totals and what's left of each category's yearly plan - plus a monthly dashboard, 1,200-row transaction log, debt payoff planner for up to 8 debts and savings goals. You can enter amounts in your own currency: cells show a $ sign and nothing is converted. A budgeting tool, not financial advice.</p>
+<a class="btn" href="https://wondevi.gumroad.com/l/chsaej" rel="nofollow">Get it - A$19.95</a></div></div>
+<p>Paid weekly or fortnightly? See which bills land in each pay with the free <a href="budget-by-paycheck-calculator.html">budget by paycheck calculator</a>.</p>
+</main>
+<footer><div class="wrap">&copy; Wondevi Productions. Free tools and guides. Figures are examples; check your own numbers. <a href="privacy.html">Privacy</a></div></footer>
+<script data-goatcounter="https://wondeviproductions.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><script>document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href*="payhip.com/b/"],a[href*="gumroad.com/l/"],a[href*="etsy.com/listing"],a[href*="etsy.com/shop"]');if(a&&window.goatcounter&&goatcounter.count)goatcounter.count({path:"buy-click/"+a.href.split("//")[1].split("?")[0],title:(a.textContent||"").trim().slice(0,80),event:true})});</script></body></html>
