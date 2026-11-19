@@ -99,4 +99,4 @@ let s=0;rows().forEach(r=>{s+=r.q*r.p;L.push([r.d,r.q,r.p.toFixed(2),(r.q*r.p).t
 L.push([],['','','Subtotal ex GST',s.toFixed(2)],['','','GST',g.toFixed(2)],['','','Total',(s+g).toFixed(2)]);
 const b=new Blob([L.map(r=>r.map(q).join(',')).join('\r\n')],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=($('no').value||'invoice')+'.csv';a.click()}
 </script>
-</body></html>
+<script data-goatcounter="https://wondeviproductions.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><script>document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href*="payhip.com/b/"],a[href*="gumroad.com/l/"],a[href*="etsy.com/listing"],a[href*="etsy.com/shop"]');if(a&&window.goatcounter&&goatcounter.count)goatcounter.count({path:"buy-click/"+a.href.split("//")[1].split("?")[0],title:(a.textContent||"").trim().slice(0,80),event:true})});</script></body></html>
