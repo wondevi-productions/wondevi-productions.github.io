@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en-AU"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google-site-verification" content="tPXCRYpCN8xnlch06chBktrB17D9lYKm7EcLdcbqKX0">
+<title>Reorder Point Calculator - When to Reorder Stock (Free, with Safety Stock)</title><meta name="description" content="Free reorder point calculator for small businesses: enter recent sales, supplier lead time and safety stock to see the stock level to reorder at, and how many days of stock you have left.">
+<link rel="canonical" href="https://wondevi-productions.github.io/reorder-point-calculator.html"><meta property="og:title" content="Reorder Point Calculator - When to Reorder Stock (Free, with Safety Stock)"><meta property="og:description" content="Free reorder point calculator for small businesses: enter recent sales, supplier lead time and safety stock to see the stock level to reorder at, and how many days of stock you have left.">
+<meta property="og:image" content="https://wondevi-productions.github.io/inventory-preview.png"><meta property="og:url" content="https://wondevi-productions.github.io/reorder-point-calculator.html"><meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--navy:#13233F;--teal:#0F9D8A;--orange:#F28C28;--ink:#1E293B;--muted:#5A6475;--light:#EEF2F7;--yel:#FFF4D6}
+*{box-sizing:border-box}body{margin:0;font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#fff}
+header{background:var(--navy);color:#fff;padding:14px 20px}header a{color:#fff;text-decoration:none;font-weight:700}
+header .wrap{display:block}
+nav{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:4px;width:100%;min-width:0}
+nav a{color:#C9D3E6;font-weight:500;font-size:15px;flex:0 0 auto}
+@media(max-width:640px){nav{gap:2px 10px}nav a{flex:1 1 42%;font-size:14px;white-space:normal}}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+h1{font-size:2.1rem;line-height:1.2;color:var(--navy);margin:32px 0 8px}h2{color:var(--navy);margin-top:36px}
+.lead{font-size:1.15rem;color:var(--muted)}
+.calc{background:var(--light);border-radius:14px;padding:22px;margin:24px 0}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 20px}@media(max-width:640px){.grid{grid-template-columns:1fr}}
+label{font-size:14px;font-weight:600;display:block}input{width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)}
+.results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}@media(max-width:640px){.results{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:10px;padding:14px;border:1px solid #D5DCE6}.card b{display:block;font-size:1.6rem;color:var(--navy)}
+.card small{color:var(--muted)}.warn{background:#FFC7CE}.ok{background:#C6EFCE}.mid{background:#FFEB9C}
+.cta{background:var(--navy);color:#fff;border-radius:14px;padding:24px;margin:32px 0;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.cta img{max-width:300px;width:100%;border-radius:8px}.cta div{flex:1;min-width:240px}
+.btn{display:inline-block;background:var(--orange);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;margin-top:8px}
+table{border-collapse:collapse;width:100%;margin:12px 0}td,th{border:1px solid #D5DCE6;padding:8px 10px;text-align:left}th{background:var(--navy);color:#fff}
+footer{color:var(--muted);font-size:14px;padding:30px 20px;border-top:1px solid #E2E8F0;margin-top:40px}
+</style></head><body>
+<header><div class="wrap"><a href="./">Wondevi Productions</a><nav><a href="index.html">Hourly rate</a><a href="job-quote-calculator.html">Job quote</a><a href="sole-trader-gst-bas-calculator.html">GST estimate</a><a href="mobile-mechanic-hourly-rate.html">Rate guide</a><a href="parts-markup-guide.html">Parts markup</a><a href="call-out-fee-and-travel-charges.html">Call-out</a><a href="mechanic-workshop-whs-checklist.html">WHS kit</a><a href="used-car-inspection-checklist.html">Used car</a><a href="tradie-hourly-rate-australia.html">Tradie rates</a><a href="electrician-hourly-rate-australia.html">Electrician rate</a><a href="used-car-test-drive-checklist.html">Test drive</a><a href="tax-invoice-template-australia.html">Invoice</a><a href="budget-by-paycheck-calculator.html">Paycheck budget</a><a href="annual-budget-calculator.html">Annual budget</a><a href="reorder-point-calculator.html">Reorder point</a><a href="shop/">Shop</a></nav></div></header>
+<main class="wrap">
+<h1>Reorder point calculator: when should you reorder stock?</h1>
+<p class="lead">Order too late and you run out while the supplier ships; order too early and cash sits on the shelf. The reorder point is the stock level at which you place the next order, so it arrives just before you run out.</p>
+<div class="calc">
+<div class="grid">
+<div><label for="sold">Units sold recently</label><input id="sold" type="number" min="0" step="1" value="90"></div>
+<div><label for="days">Over how many days</label><input id="days" type="number" min="0" step="1" value="30"></div>
+<div><label for="lead">Supplier lead time (days from order to stock arriving)</label><input id="lead" type="number" min="0" step="1" value="7"></div>
+<div><label for="safe">Safety stock (extra units kept as a buffer)</label><input id="safe" type="number" min="0" step="1" value="5"></div>
+<div><label for="oh">Stock on hand now (optional)</label><input id="oh" type="number" min="0" step="1" value="40"></div>
+</div>
+<div class="results">
+<div class="card"><small>Reorder point</small><b id="rp">-</b><small id="rd"></small></div>
+<div class="card" id="rsc"><small>Stock on hand</small><b id="rs">-</b><small id="rsn"></small></div>
+</div>
+</div>
+<script>
+// Reorder point = average daily sales x supplier lead time (days) + safety stock.
+// Days of stock left = on hand / average daily sales.
+function reorder(unitsSold, periodDays, leadDays, safety, onHand){
+  if(!(unitsSold>=0)||!(periodDays>0)||!(leadDays>=0)||!(safety>=0)) return null;
+  const daily=unitsSold/periodDays;
+  const rop=Math.ceil(daily*leadDays+safety);
+  const out={daily:Math.round(daily*100)/100, reorderPoint:rop};
+  if(onHand>=0&&onHand!==''){ out.onHand=onHand; out.orderNow=onHand<=rop; out.daysLeft=daily>0?Math.floor(onHand/daily):null; }
+  return out;
+}
+
+
+
+const g=id=>document.getElementById(id);
+function calc(){
+ const oh=g('oh').value===''?'':+g('oh').value;
+ const r=reorder(+g('sold').value,+g('days').value,+g('lead').value,+g('safe').value,oh);
+ if(!r){g('rp').textContent='-';g('rd').textContent='Check your numbers (days must be more than 0).';g('rs').textContent='-';return;}
+ g('rp').textContent=r.reorderPoint+' units'; g('rd').textContent='about '+r.daily+' sold per day';
+ const c=g('rsc'); c.classList.remove('ok','warn');
+ if(r.onHand===undefined){g('rs').textContent='-'; g('rsn').textContent='enter stock on hand';}
+ else { c.classList.add(r.orderNow?'warn':'ok'); g('rs').textContent=r.orderNow?'Reorder now':'Not yet';
+   g('rsn').textContent=r.daysLeft===null?'no recent sales':('about '+r.daysLeft+' days of stock left'); }
+}
+document.querySelectorAll('input').forEach(el=>el.addEventListener('input',calc)); calc();
+
+</script>
+<h2>How it works</h2>
+<ul>
+<li>Average daily sales = units sold / number of days.</li>
+<li>Reorder point = average daily sales x lead time (days) + safety stock, rounded up to a whole unit.</li>
+<li>When stock on hand is at or below the reorder point, it's time to order. Days of stock left = stock on hand / average daily sales.</li>
+</ul>
+<p>Example with the numbers filled in: 90 units sold in 30 days is 3 a day. With a 7-day lead time and 5 units of safety stock, the reorder point is 3 x 7 + 5 = 26 units. With 40 on hand you have about 13 days of stock, so it's not time to order yet.</p>
+<p><i>A planning estimate based on the numbers you enter - if sales are seasonal or your supplier is unreliable, keep more safety stock. Nothing you type is sent anywhere - it runs in your browser.</i></p>
+<div class="cta"><img src="inventory-preview.png" alt="Inventory and stock tracker spreadsheet for Microsoft Excel (example figures)" loading="lazy">
+<div><h2 style="color:#fff;margin-top:0">Track every item's stock and reorder alerts</h2>
+<p>The <b>Inventory Tracker Spreadsheet</b> (made for Microsoft Excel) keeps up to 300 items with a reorder level for each, and shows a status - Reorder, Out of stock or Below zero - from a 2,000-row stock movements log (received, sold, customer returns and adjustments). A dashboard shows units sold, sales, cost of goods sold and gross profit for any month, plus a 12-month sales chart. You can enter amounts in your own currency: cells show a $ sign and nothing is converted. A record-keeping tool, not accounting or tax advice.</p>
+<a class="btn" href="https://wondevi.gumroad.com/l/werxj" rel="nofollow">Get it - A$16.95</a></div></div>
+</main>
+<footer><div class="wrap">&copy; Wondevi Productions. Free tools and guides. Figures are examples; check your own numbers. <a href="privacy.html">Privacy</a></div></footer>
+<script data-goatcounter="https://wondeviproductions.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><script>document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href*="payhip.com/b/"],a[href*="gumroad.com/l/"],a[href*="etsy.com/listing"],a[href*="etsy.com/shop"]');if(a&&window.goatcounter&&goatcounter.count)goatcounter.count({path:"buy-click/"+a.href.split("//")[1].split("?")[0],title:(a.textContent||"").trim().slice(0,80),event:true})});</script></body></html>
