@@ -62,7 +62,7 @@ const g=id=>document.getElementById(id);
 function calc(){
  const oh=g('oh').value===''?'':+g('oh').value;
  const r=reorder(+g('sold').value,+g('days').value,+g('lead').value,+g('safe').value,oh);
- if(!r){g('rp').textContent='-';g('rd').textContent='Check your numbers (days must be more than 0).';g('rs').textContent='-';return;}
+ if(!r){g('rp').textContent='-';g('rd').textContent='Check your numbers (days must be more than 0).';g('rs').textContent='-';g('rsn').textContent='';g('rsc').classList.remove('ok','warn');return;}
  g('rp').textContent=r.reorderPoint+' units'; g('rd').textContent='about '+r.daily+' sold per day';
  const c=g('rsc'); c.classList.remove('ok','warn');
  if(r.onHand===undefined){g('rs').textContent='-'; g('rsn').textContent='enter stock on hand';}
