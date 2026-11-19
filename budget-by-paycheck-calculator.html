@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en-AU"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google-site-verification" content="tPXCRYpCN8xnlch06chBktrB17D9lYKm7EcLdcbqKX0">
+<title>Budget by Paycheck Calculator - Which Bills Fall Before Your Next Pay? (Free)</title><meta name="description" content="Free budget by paycheck calculator: enter your pay date, take-home pay and monthly bills to see which bills fall due before your next pay and what is left to spend. Weekly or fortnightly pay.">
+<link rel="canonical" href="https://wondevi-productions.github.io/budget-by-paycheck-calculator.html"><meta property="og:title" content="Budget by Paycheck Calculator - Which Bills Fall Before Your Next Pay? (Free)"><meta property="og:description" content="Free budget by paycheck calculator: enter your pay date, take-home pay and monthly bills to see which bills fall due before your next pay and what is left to spend. Weekly or fortnightly pay.">
+<meta property="og:image" content="https://wondevi-productions.github.io/paycheck-preview.jpg"><meta property="og:url" content="https://wondevi-productions.github.io/budget-by-paycheck-calculator.html"><meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--navy:#13233F;--teal:#0F9D8A;--orange:#F28C28;--ink:#1E293B;--muted:#5A6475;--light:#EEF2F7;--yel:#FFF4D6}
+*{box-sizing:border-box}body{margin:0;font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#fff}
+header{background:var(--navy);color:#fff;padding:14px 20px}header a{color:#fff;text-decoration:none;font-weight:700}
+header .wrap{display:block}
+nav{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:4px;width:100%;min-width:0}
+nav a{color:#C9D3E6;font-weight:500;font-size:15px;flex:0 0 auto}
+@media(max-width:640px){nav{gap:2px 10px}nav a{flex:1 1 42%;font-size:14px;white-space:normal}}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+h1{font-size:2.1rem;line-height:1.2;color:var(--navy);margin:32px 0 8px}h2{color:var(--navy);margin-top:36px}
+.lead{font-size:1.15rem;color:var(--muted)}
+.calc{background:var(--light);border-radius:14px;padding:22px;margin:24px 0}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 20px}@media(max-width:640px){.grid{grid-template-columns:1fr}}
+label{font-size:14px;font-weight:600;display:block}input{width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)}
+.results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}@media(max-width:640px){.results{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:10px;padding:14px;border:1px solid #D5DCE6}.card b{display:block;font-size:1.6rem;color:var(--navy)}
+.card small{color:var(--muted)}.warn{background:#FFC7CE}.ok{background:#C6EFCE}.mid{background:#FFEB9C}
+.cta{background:var(--navy);color:#fff;border-radius:14px;padding:24px;margin:32px 0;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.cta img{max-width:300px;width:100%;border-radius:8px}.cta div{flex:1;min-width:240px}
+.btn{display:inline-block;background:var(--orange);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;margin-top:8px}
+table{border-collapse:collapse;width:100%;margin:12px 0}td,th{border:1px solid #D5DCE6;padding:8px 10px;text-align:left}th{background:var(--navy);color:#fff}
+footer{color:var(--muted);font-size:14px;padding:30px 20px;border-top:1px solid #E2E8F0;margin-top:40px}
+</style></head><body>
+<header><div class="wrap"><a href="./">Wondevi Productions</a><nav><a href="index.html">Hourly rate</a><a href="job-quote-calculator.html">Job quote</a><a href="sole-trader-gst-bas-calculator.html">GST estimate</a><a href="mobile-mechanic-hourly-rate.html">Rate guide</a><a href="parts-markup-guide.html">Parts markup</a><a href="call-out-fee-and-travel-charges.html">Call-out</a><a href="mechanic-workshop-whs-checklist.html">WHS kit</a><a href="used-car-inspection-checklist.html">Used car</a><a href="tradie-hourly-rate-australia.html">Tradie rates</a><a href="electrician-hourly-rate-australia.html">Electrician rate</a><a href="used-car-test-drive-checklist.html">Test drive</a><a href="tax-invoice-template-australia.html">Invoice</a><a href="budget-by-paycheck-calculator.html">Paycheck budget</a><a href="shop/">Shop</a></nav></div></header>
+<main class="wrap">
+<h1>Budget by paycheck: which bills fall before your next pay?</h1>
+<p class="lead">Paid weekly or fortnightly but your bills come monthly? Some pays carry the rent and the car loan, others carry almost nothing. Put in your next pay date and your bills to see exactly what this pay has to cover, and what is left to spend.</p>
+<div class="calc">
+<div class="grid">
+<div><label for="pd">Next pay date</label><input id="pd" type="date" value="2026-12-04"></div>
+<div><label for="fq">How often you are paid</label><select id="fq" style="width:100%;padding:9px 10px;font-size:16px;border:1px solid #C9D1DC;border-radius:8px;background:var(--yel)"><option value="14">Fortnightly</option><option value="7">Weekly</option></select></div>
+<div><label for="tp">Take-home pay per pay ($)</label><input id="tp" type="number" min="0" step="0.01" value="2400"></div>
+<div><label for="sv">Savings per pay ($)</label><input id="sv" type="number" min="0" step="0.01" value="150"></div>
+</div>
+<p style="margin:18px 0 4px"><b>Monthly bills</b> (due day of the month, 1-31; a bill due on the 29th-31st falls on the last day of shorter months)</p>
+<table><tr><th>Bill</th><th>Amount ($)</th><th>Due day</th></tr><tr><td><input id="bn0" value="Rent" aria-label="Bill 1 name"></td><td><input id="ba0" type="number" min="0" step="0.01" value="1600" aria-label="Bill 1 amount"></td><td><input id="bd0" type="number" min="1" max="31" value="1" aria-label="Bill 1 due day"></td></tr><tr><td><input id="bn1" value="Car loan" aria-label="Bill 2 name"></td><td><input id="ba1" type="number" min="0" step="0.01" value="420" aria-label="Bill 2 amount"></td><td><input id="bd1" type="number" min="1" max="31" value="10" aria-label="Bill 2 due day"></td></tr><tr><td><input id="bn2" value="Phone" aria-label="Bill 3 name"></td><td><input id="ba2" type="number" min="0" step="0.01" value="65" aria-label="Bill 3 amount"></td><td><input id="bd2" type="number" min="1" max="31" value="15" aria-label="Bill 3 due day"></td></tr><tr><td><input id="bn3" value="Electricity" aria-label="Bill 4 name"></td><td><input id="ba3" type="number" min="0" step="0.01" value="190" aria-label="Bill 4 amount"></td><td><input id="bd3" type="number" min="1" max="31" value="22" aria-label="Bill 4 due day"></td></tr><tr><td><input id="bn4" value="Insurance" aria-label="Bill 5 name"></td><td><input id="ba4" type="number" min="0" step="0.01" value="140" aria-label="Bill 5 amount"></td><td><input id="bd4" type="number" min="1" max="31" value="28" aria-label="Bill 5 due day"></td></tr><tr><td><input id="bn5" value="" aria-label="Bill 6 name"></td><td><input id="ba5" type="number" min="0" step="0.01" value="" aria-label="Bill 6 amount"></td><td><input id="bd5" type="number" min="1" max="31" value="" aria-label="Bill 6 due day"></td></tr><tr><td><input id="bn6" value="" aria-label="Bill 7 name"></td><td><input id="ba6" type="number" min="0" step="0.01" value="" aria-label="Bill 7 amount"></td><td><input id="bd6" type="number" min="1" max="31" value="" aria-label="Bill 7 due day"></td></tr><tr><td><input id="bn7" value="" aria-label="Bill 8 name"></td><td><input id="ba7" type="number" min="0" step="0.01" value="" aria-label="Bill 8 amount"></td><td><input id="bd7" type="number" min="1" max="31" value="" aria-label="Bill 8 due day"></td></tr></table>
+<div class="results">
+<div class="card"><small>Bills due this pay</small><b id="rb">-</b><small id="rbn"></small></div>
+<div class="card"><small>Savings</small><b id="rs">-</b></div>
+<div class="card" id="rlc"><small>Left to spend this pay</small><b id="rl">-</b><small id="rln"></small></div>
+</div>
+<p id="rlist" style="margin-top:12px;font-size:15px"></p>
+</div>
+<script>
+// Bills due in one pay period: [payday, payday + freqDays). Monthly bills on a day of month (31 -> last day of shorter months).
+function dim(y,m){return new Date(Date.UTC(y,m+1,0)).getUTCDate();}
+function billsInPeriod(paydayISO,freqDays,bills){
+  const p=paydayISO.split('-').map(Number); const start=Date.UTC(p[0],p[1]-1,p[2]); const end=start+freqDays*86400000;
+  const out=[];
+  for(const b of bills){
+    if(!(b.amount>0)||!(b.day>=1&&b.day<=31)) continue;
+    const s=new Date(start); let y=s.getUTCFullYear(), m=s.getUTCMonth();
+    for(let k=0;k<3;k++){ // window <= 31 days touches at most 3 calendar months
+      const d=Date.UTC(y,m,Math.min(b.day,dim(y,m)));
+      if(d>=start&&d<end) out.push({name:b.name||'Bill',amount:b.amount,date:new Date(d).toISOString().slice(0,10)});
+      m++; if(m>11){m=0;y++;}
+    }
+  }
+  out.sort((a,b)=>a.date<b.date?-1:1); return out;
+}
+
+
+
+const g=id=>document.getElementById(id);
+const money=v=>(v<0?'-':'')+'$'+Math.abs(v).toLocaleString('en-AU',{minimumFractionDigits:2,maximumFractionDigits:2});
+function calc(){
+ const pd=g('pd').value, fq=+g('fq').value, tp=+g('tp').value||0, sv=+g('sv').value||0;
+ const bills=[]; for(let i=0;i<8;i++) bills.push({name:g('bn'+i).value.trim(),amount:+g('ba'+i).value,day:+g('bd'+i).value});
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(pd)){g('rlist').textContent='Enter your next pay date.';return;}
+ const due=billsInPeriod(pd,fq,bills); const tot=due.reduce((s,b)=>s+b.amount,0); const left=tp-sv-tot;
+ const endD=new Date(Date.parse(pd+'T00:00:00Z')+(fq-1)*86400000).toISOString().slice(0,10);
+ g('rb').textContent=money(tot); g('rbn').textContent=due.length+' bill'+(due.length==1?'':'s')+' from '+pd+' to '+endD;
+ g('rs').textContent=money(sv); g('rl').textContent=money(left);
+ const c=g('rlc'); c.classList.remove('ok','warn'); c.classList.add(left<0?'warn':'ok');
+ g('rln').textContent=left<0?'this pay runs short':'after bills and savings';
+ g('rlist').textContent=due.length?('Due this pay: '+due.map(b=>b.name+' '+money(b.amount)+' ('+b.date+')').join(', ')):'No monthly bills fall due this pay.';
+}
+document.querySelectorAll('input,select').forEach(el=>el.addEventListener('input',calc)); calc();
+
+</script>
+<h2>How it works</h2>
+<ul>
+<li>This pay covers every bill due from your pay date up to the day before your next pay.</li>
+<li>Monthly bills land on the same day each month; a bill due on the 29th, 30th or 31st falls on the last day of shorter months.</li>
+<li>Left to spend = take-home pay minus savings minus the bills due this pay.</li>
+</ul>
+<p>Example with the numbers filled in: paid fortnightly from 4 December 2026, the phone (15th), electricity (22nd) and insurance (28th) fall in the first pay, while rent (1st) and the car loan (10th) land in later pays. That is why one pay can feel rich and the next one short.</p>
+<p><i>A planning tool using the numbers you enter; not financial advice. Nothing you type is sent anywhere - it runs in your browser.</i></p>
+<div class="cta"><img src="paycheck-preview.jpg" alt="Paycheck budget spreadsheet for Microsoft Excel showing a pay plan (example numbers)" loading="lazy">
+<div><h2 style="color:#fff;margin-top:0">Plan your next 26 pays, not just one</h2>
+<p>The <b>Paycheck Budget Spreadsheet</b> (made for Microsoft Excel) takes your pay frequency (weekly, fortnightly, twice a month or monthly) and up to 40 bills - monthly, fortnightly, weekly, quarterly, yearly, every pay or one-off - and builds a Pay Plan for your next 26 pays: bills due before the next pay, savings, and left to spend, shown in red when a pay runs short. Plus a Bills by Pay grid. A planning tool, not financial advice.</p>
+<a class="btn" href="https://wondevi.gumroad.com/l/qcndf" rel="nofollow">Get it - A$11.95</a></div></div>
+<p>Prefer a monthly budget? The <a href="https://wondevi.gumroad.com/l/rswxf" rel="nofollow">Budget, Expense Tracker &amp; Debt Payoff Planner</a> (A$15) or the <a href="https://wondevi.gumroad.com/l/chsaej" rel="nofollow">Annual Budget Spreadsheet with a 12-month Year Overview</a> (A$19.95).</p>
+</main>
+<footer><div class="wrap">&copy; Wondevi Productions. Free tools and guides. Figures are examples; check your own numbers. <a href="privacy.html">Privacy</a></div></footer>
+</body></html>
